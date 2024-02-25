@@ -26,10 +26,10 @@ sidebar_position: 5
 
 * [博客 - 5个免费获得美国虚拟电话号码渠道](https://jiemahao.com/get-usa-phone-number-from-google-voice/)
 * [Google Voice](https://voice.google.com/)
-* [TextNow]()
-* [Textfree]()
-* [Talkatone]()
-* [Twilio]()
+* [TextNow](https://www.textnow.com/)
+* [Textfree](https://textfree.us/)
+* [Talkatone](https://www.talkatone.com/)
+* [Twilio](https://www.twilio.com/en-us)
 
 # Email
 

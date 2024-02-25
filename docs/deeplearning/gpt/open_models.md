@@ -5,19 +5,60 @@ sidebar_label: Open-Source GPT models
 sidebar_position: 2
 ---
 
-# Models
+# Open-Source GPT Models
 
-## Llama1
+## Meta LLama
 
-论文地址：[LLaMA: Open and Efficient Foundation Language Models](https://arxiv.org/pdf/2302.13971.pdf)
+### Llama1
 
-## Llama2
+技术报告：
 
-模型下载地址：[meta - llama](https://ai.meta.com/resources/models-and-libraries/llama-downloads)，[huggingface - llama2](https://huggingface.co/meta-llama)。
+* [LLaMA: Open and Efficient Foundation Language Models](https://arxiv.org/abs/2302.13971)
+
+### Llama2
+
+Llama 2是一个预训练和微调的生成文本模型的集合，其规模从70亿到700亿个参数不等。这是70B预训练模型的存储库。其他模型的链接可以在底部的索引中找到。
+
+技术报告：
+
+* [Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288)
+
+模型下载地址：
+
+* [meta - llama](https://ai.meta.com/resources/models-and-libraries/llama-downloads)
+* [huggingface - meta-llama](https://huggingface.co/meta-llama)。
 
 模型结构可参考[知乎-麦田守望者](https://zhuanlan.zhihu.com/p/647862867)的文章。
 
-## Qwen
+## Google Gemma
+
+Gemma是谷歌的一个轻量级、最先进的开放模型家族，采用了与创建Gemini模型相同的研究和技术。它们是文本到文本、仅解码器的大型语言模型，有英文版本，具有开放权重、预训练变体和指令调整变体。Gemma模型非常适合各种文本生成任务，包括问答、摘要和推理。
+
+技术报告：
+
+* [Gemma技术报告](https://blog.google/technology/developers/gemma-open-models/)
+* [Gemma: Open Models Based on Gemini Research and Technology](https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf)
+
+模型下载地址：
+
+* [huggingface google/gemma-2b](https://huggingface.co/google/gemma-2b)
+* [huggingface google/gemma-2b-it](https://huggingface.co/google/gemma-2b-it)
+* [huggingface google/gemma-7b](https://huggingface.co/google/gemma-7b)
+* [huggingface google/gemma-7b-it](https://huggingface.co/google/gemma-7b-it)
+
+## Alibaba Qwen
+
+Qwen1.5是一个语言模型系列，包括不同模型大小的解码器语言模型。对于每种大小，我们都会发布基本语言模型和对齐的聊天模型。它基于Transformer架构，具有SwiGLU激活、注意力QKV偏差、组查询注意力、滑动窗口注意力和完全注意力的混合等功能。此外，我们还有一个改进的标记器，适用于多种自然语言和代码。
+
+技术报告：
+
+* [Arxiv - Qwen Technology Report](https://arxiv.org/abs/2309.16609)
+* [Aliyuncs - Qwen Technology Report](https://qianwen-res.oss-cn-beijing.aliyuncs.com/QWEN_TECHNICAL_REPORT.pdf)
+
+模型下载地址：
+
+* [huggingface Qwen/Qwen1.5-72B-Chat](https://huggingface.co/Qwen/Qwen1.5-72B-Chat)
+* [huggingface Qwen/Qwen1.5-14B-Chat](https://huggingface.co/Qwen/Qwen1.5-14B-Chat)
 
 # 参考资料
 

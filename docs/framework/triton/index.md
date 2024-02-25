@@ -1,3 +1,9 @@
+---
+title: Triton
+tags: [triton, nvidia]
+sidebar_label: Triton
+sidebar_position: 3
+---
 
 # 介绍
 
