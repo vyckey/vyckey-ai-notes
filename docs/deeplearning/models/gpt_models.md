@@ -1,9 +1,11 @@
 ---
-title: Open-Source GPT models
-tags: [deeplearning, gpt, opensource]
-sidebar_label: Open-Source GPT models
+title: GPT Models
+tags: [deeplearning, gpt]
+sidebar_label: GPT Models
 sidebar_position: 2
 ---
+
+# GPT Models
 
 # Open-Source GPT Models
 
@@ -59,6 +61,16 @@ Qwen1.5是一个语言模型系列，包括不同模型大小的解码器语言�
 
 * [huggingface Qwen/Qwen1.5-72B-Chat](https://huggingface.co/Qwen/Qwen1.5-72B-Chat)
 * [huggingface Qwen/Qwen1.5-14B-Chat](https://huggingface.co/Qwen/Qwen1.5-14B-Chat)
+
+# Closed-Source Models
+
+## Claude
+
+### Claude 3
+
+技术报告：
+
+* [Then Claude 3 Model Family: Opus, Sonnet, Haiku](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf)
 
 # 参考资料
 
