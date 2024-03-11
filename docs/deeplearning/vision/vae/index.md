@@ -5,6 +5,7 @@ sidebar_label: Variational Auto-Encoder
 sidebar_position: 12
 ---
 
+# Variational Auto-Encoder (VAE)
 
 # 参考资料
 
