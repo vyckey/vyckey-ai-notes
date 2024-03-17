@@ -43,9 +43,5 @@ OpenAI于2021年12月发表。文中提出了CFG(Classifier Free Guidance，无�
 
 # Models
 
-## Sora
-
-《[OpenAI的Sora技术报告](https://openai.com/research/video-generation-models-as-world-simulators)》
-
 # 参考资料
 

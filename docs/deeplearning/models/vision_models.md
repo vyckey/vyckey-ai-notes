@@ -11,6 +11,13 @@ sidebar_position: 3
 
 ### DALL·E 3
 
+### Sora
+
+相关论文：
+
+* 《[OpenAI的Sora技术报告](https://openai.com/research/video-generation-models-as-world-simulators)》
+* 《[Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models](https://arxiv.org/abs/2402.17177)》
+
 ## Midjourney
 
 ### Midjourney v6
@@ -54,6 +61,14 @@ Stable Diffusion v2是指模型架构的特定配置，该配置使用具有865M
 ## Pika
 
 官网 [pika](https://pika.art)
+
+## Apple
+
+### MM1
+
+相关论文：
+
+《[MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training](https://arxiv.org/abs/2403.09611)》
 
 # 参考资料
 
