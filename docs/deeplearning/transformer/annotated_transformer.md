@@ -251,7 +251,7 @@ None
 An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.
 
 We call our particular attention “Scaled Dot-Product Attention”. The input consists of queries and keys of dimension 
-$d_k$, and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $√d_k$
+$d_k$, and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $\sqrt{d_k}$
 , and apply a softmax function to obtain the weights on the values.
 
 ```
@@ -263,7 +263,7 @@ Image(filename='images/ModalNet-19.png')
 In practice, we compute the attention function on a set of queries simultaneously, packed together into a matrix 
 $Q$. The keys and values are also packed together into matrices $K$ and $V$. We compute the matrix of outputs as:
 
-$$Attention(Q,K,V)=softmax(\frac{QKT^T}{√d_k})V$$
+$$Attention(Q,K,V)=softmax(\frac{QKT^T}{\sqrt{d_k}})V$$
 
 ```python
 def attention(query, key, value, mask=None, dropout=None):
@@ -279,9 +279,9 @@ def attention(query, key, value, mask=None, dropout=None):
     return torch.matmul(p_attn, value), p_attn
 ```
 
-The two most commonly used attention functions are additive attention ([cite](https://arxiv.org/abs/1409.0473)), and dot-product (multiplicative) attention. Dot-product attention is identical to our algorithm, except for the scaling factor of $\frac{1}{√d_k}$. Additive attention computes the compatibility function using a feed-forward network with a single hidden layer. While the two are similar in theoretical complexity, dot-product attention is much faster and more space-efficient in practice, since it can be implemented using highly optimized matrix multiplication code.
+The two most commonly used attention functions are additive attention ([cite](https://arxiv.org/abs/1409.0473)), and dot-product (multiplicative) attention. Dot-product attention is identical to our algorithm, except for the scaling factor of $\frac{1}{\sqrt{d_k}}$. Additive attention computes the compatibility function using a feed-forward network with a single hidden layer. While the two are similar in theoretical complexity, dot-product attention is much faster and more space-efficient in practice, since it can be implemented using highly optimized matrix multiplication code.
 
-While for small values of dk the two mechanisms perform similarly, additive attention outperforms dot product attention without scaling for larger values of $d_k$ ([cite](https://arxiv.org/abs/1703.03906)). We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients (To illustrate why the dot products get large, assume that the components of q and k are independent random variables with mean 0 and variance 1. Then their dot product, $q⋅k=\sum^{dk}_{i=1}q_ik_i$, has mean `0` and variance `dk`.). To counteract this effect, we scale the dot roducts by $\frac{1}{√d_k}$.
+While for small values of dk the two mechanisms perform similarly, additive attention outperforms dot product attention without scaling for larger values of $d_k$ ([cite](https://arxiv.org/abs/1703.03906)). We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients (To illustrate why the dot products get large, assume that the components of q and k are independent random variables with mean 0 and variance 1. Then their dot product, $q⋅k=\sum^{dk}_{i=1}q_ik_i$, has mean `0` and variance `dk`.). To counteract this effect, we scale the dot roducts by $\frac{1}{\sqrt{d_k}}$.
 
 ```python
 Image(filename='images/ModalNet-20.png')

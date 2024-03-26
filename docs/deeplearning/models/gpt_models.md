@@ -68,6 +68,17 @@ Qwen1.5是一个语言模型系列，包括不同模型大小的解码器语言�
 
 ### Claude 3
 
+## XAI 
+
+### Grok 1
+
+源码和模型下载地址：
+
+* [GitHub - xai-org/grok-1](https://github.com/xai-org/grok-1)
+* [XAI - model card](https://x.ai/model-card/)
+* [模型权重磁力链接](magnet:?xt=urn:btih:5f96d43576e3d386c9ba65b883210a393b68210e&tr=https%3A%2F%2Facademictorrents.com%2Fannounce.php&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
+* [Huggingface - xai-org/grok-1](https://huggingface.co/xai-org/grok-1)
+
 技术报告：
 
 * [Then Claude 3 Model Family: Opus, Sonnet, Haiku](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf)

@@ -70,6 +70,12 @@ Stable Diffusion v2是指模型架构的特定配置，该配置使用具有865M
 
 《[MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training](https://arxiv.org/abs/2403.09611)》
 
+## HPC-AI Tech
+
+[GitHub - hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)
+
+[GitHub - hpcai-tech/Open-Sora](https://huggingface.co/hpcai-tech/Open-Sora)
+
 # 参考资料
 
 * [Civitai官网](https://civitai.com)
