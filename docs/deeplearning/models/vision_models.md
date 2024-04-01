@@ -9,7 +9,19 @@ sidebar_position: 3
 
 ## OpenAI
 
+相关论文：
+
+* 《[DALL·E: Zero-Shot Text-to-Image Generation](https://arxiv.org/abs/2102.12092)》
+
+相关代码：
+
+[GitHub - openai/dall-e](https://github.com/openai/dall-e)
+
 ### DALL·E 3
+
+相关论文：
+
+* 《[Improving Image Captioning with Better Use of Captions](https://arxiv.org/abs/2006.11807)》
 
 ### Sora
 

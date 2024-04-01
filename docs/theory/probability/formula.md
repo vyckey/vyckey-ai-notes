@@ -7,16 +7,65 @@ sidebar_position: 2
 
 # 概率公式
 
+## 分布列、概率密度和分布函数
+
+### 分布列
+
+分布列一般是针对于离散随机变量 $X$ 而言，使用 $p_X(x)$ 表示
+
+$$
+\begin{align}
+p_X(x)=P({X=x})
+\end{align}
+$$
+
+### 概率密度函数PDF
+
+分布列一般是针对于连续随机变量 $X$ 而言，使用 $f_X(x)$ 表示
+
+$$
+\begin{align}
+P(X\in B)=\int_{B}f_X(x)\mathrm{d}x
+\end{align}
+$$
+
+### 分布函数CDF
+
+$$
+\begin{align}
+F_X(x)=P(X\le x)=
+\begin{cases}
+\sum _{k\le x}p_X(k) &\text{if }X\text{为离散随机变量} \\
+\int _{-\infty }^{\infty }f_X(t)\,\mathrm{d}t &\text{if }X\text{为连续随机变量} \\
+\end{cases}
+\end{align}
+$$
+
 ## 期望和方差
 
 ### 数学期望
 
 $$
 \begin{align}
-{E}[X]&=\sum _{i}x_{i}p(x_i) \qquad(X\text{为离散随机变量}) \\
-{E}[X]&=\int _{-\infty }^{\infty }xf(x)\,\mathrm{d}x \qquad(X\text{为连续随机变量})
+E[X]=
+\begin{cases}
+\sum _{i}x_{i}p_X(x_i) &\text{if }X\text{为离散随机变量} \\
+\int _{-\infty }^{\infty }xf_X(x)\,\mathrm{d}x &\text{if }X\text{为连续随机变量} \\
+\end{cases}
 \end{align}
 $$
+
+$$
+\begin{align}
+E[g(X)]=
+\begin{cases}
+\sum _{i}g(x_{i})p_X(x_i) &\text{if }X\text{为离散随机变量} \\
+\int _{-\infty }^{\infty }g(x)f_X(x)\,\mathrm{d}x &\text{if }X\text{为连续随机变量} \\
+\end{cases}
+\end{align}
+$$
+
+对于随机变量 $X$ 和 $Y=aX+b$ ，其中 $a$ 和 $b$ 为常数，则有 $E[Y]=aE[X]+b$ 。
 
 ### 方差
 
@@ -28,6 +77,39 @@ $$
 ~&=E[X]^2-E[X^2]
 \end{align}
 $$
+
+对于随机变量 $X$ 和 $Y=aX+b$ ，其中 $a$ 和 $b$ 为常数，则有 $Var(Y)=a^2Var(X)$ 。
+
+### 协方差
+
+$X$ 和 $Y$ 的协方差公式如下：
+
+$$
+\begin{align}
+conv(X,Y)&=E\big[(X-E[X])(Y-E[Y])\big]=E[XY]-E[X]E[Y]
+\end{align}
+$$
+
+可推导出如下结论：
+
+$$
+\begin{align}
+conv(X,X)&=Var(X) \\
+conv(X,aY+b)&=a\cdot conv(X,Y) \\
+conv(X,Y+Z)&=conv(X,Y)+conv(X,Z) \\
+Var(X+Y)&=Var(X)+Var(Y)+2\cdot conv(X,Y) \\
+Var\big(\sum_{i=1}^n{X_i}\big)&=\sum_{i=1}^n{Var(X_i)}+\sum_{\{i,j\}|i\not ={j}}^n{conv(X_i,X_j)} \\
+\end{align}
+$$
+
+如果 $conv(X,Y)=0$ ，则称 $X$ 和 $Y$ **不相关**，如果大于 $0$ 则称 $X$ 和 $Y$ **正相关**，如果小于 $0$ 则称 $X$ 和 $Y$ **负相关**。
+
+具有正方差的随机变量 $X$ 和 $Y$ 的相关系数 $\rho(X,Y)$ 定义为：
+
+$$
+\rho(X,Y)=\frac{conv(X,Y)}{\sqrt{Var(X)Var(Y)}} \qquad\text{且满足}-1\le \rho(X,Y)\le 1
+$$
+
 
 ## 常见分布
 
@@ -70,6 +152,15 @@ Var(X)&=\sigma^2 \nonumber
 $$
 
 ## 概率分布
+
+### 贝叶斯定律
+
+$$
+\begin{align}
+p_{X|Y}(x|y)=\frac{p_{Y|X}(y|x)p_X(x)}{p_Y(y)}=\frac{p_{Y|X}(y|x)p_X(x)}{\sum_{x_i\in{X}}p_{Y|X}(y|x_i)p_X(x_i)} \\
+f_{X|Y}(x|y)=\frac{f_{Y|X}(y|x)f_X(x)}{f_Y(y)}=\frac{f_{Y|X}(y|x)f_X(x)}{\int_{-\infty}^{+\infty}f_{Y|X}(y|\hat{x})f_X(\hat{x})\mathrm{d}\hat{x}}
+\end{align}
+$$
 
 ### 连续随机变量和分布
 
